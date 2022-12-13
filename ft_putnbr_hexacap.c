@@ -1,32 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_putnbr_hexacap.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: itovar-n <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/25 16:38:54 by itovar-n          #+#    #+#             */
-/*   Updated: 2022/11/01 17:10:15 by itovar-n         ###   ########.fr       */
+/*   Created: 2022/11/10 17:29:35 by itovar-n          #+#    #+#             */
+/*   Updated: 2022/11/11 18:14:34 by itovar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libftprintf.h"
 
-size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
+int	ft_putnbr_hexacap(va_list ap)
 {
-	size_t	i;
+	int		n;
+	int		result;
+	char	*base;
+	int		size;
 
-	i = 0;
-	if (dstsize > 0)
+	result = 0;
+	n = va_arg(ap, int);
+	base = "0123456789ABDCDF";
+	size = (int) ft_strlen(base);
+	ft_putnbr_base_fd(n, base, 1);
+	while (n > size)
 	{
-		while (i < (dstsize -1) && src[i] != '\0')
-		{
-			dst[i] = src [i];
-			i++;
-		}
-		dst[i] = '\0';
+		result++;
+		n = (n - (n % size)) / size;
 	}
-	while (src[i] != '\0')
-		i++;
-	return (i);
+	return (result + 1);
 }

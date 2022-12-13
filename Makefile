@@ -5,6 +5,7 @@ SRCS	= ft_printf.c \
 		  ft_putnbr.c \
 		  ft_putptr_hexamin.c \
 		  ft_putnbr_hexamin.c \
+		  ft_putnbr_hexacap.c \
 		  ft_putnbr_unsigned.c \
 		  ft_putpercent.c
 		  					  

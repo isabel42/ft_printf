@@ -25,6 +25,7 @@ int	ft_putptr_hexamin(va_list ap);
 int	ft_putnbr(va_list ap);
 int	ft_putnbr_unsigned(va_list ap);
 int	ft_putnbr_hexamin(va_list ap);
+int	ft_putnbr_hexacap(va_list ap);
 int	ft_putpercent(va_list ap);
 int	ft_parse_pos(char s);
 int	ft_alloc(va_list ap, int nb);

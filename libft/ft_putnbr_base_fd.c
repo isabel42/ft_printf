@@ -12,13 +12,11 @@
 
 #include "libft.h"
 
-void	ft_putnbr_base_fd(int n, char *base, int fd)
+void	ft_putnbr_base_fd(long int n, char *base, int fd)
 {
-	int	size;
+	long int	size;	
 
-	size = (int) ft_strlen(base);
-	if (n < 0)
-		n = n + 2147483648;
+	size = (long int) ft_strlen(base);
 	if (n <= size)
 		ft_putchar_fd(base[n], fd);
 	else

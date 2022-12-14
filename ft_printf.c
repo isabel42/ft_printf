@@ -38,17 +38,17 @@ int	ft_printf(const char *str, ...)
 	va_end(ap);
 	return (result);
 }
-/*
+
 int main()
-{
+ {
 	//int b = 0;
 	//int *a = &b;
 	//int j = 2147483643;
-	ft_printf("%c-%c\n", 'a', 'b' );
-	ft_printf("this is a char: %c and this is and int %d\n", 'a', 1 );
+	//ft_printf("this is a char: %c and this is and int %d\n", 'a', 1 );
+	ft_printf("%x\n", -14523);
+	printf("%x\n", -14523);
 	//ft_printf("simple text\n");
 	//printf("%c\n",'B');
 	//printf("this is a test\n");
-	ft_printf("this is a string: %s and this is an char %c", "this is a test", 'c');
+	//ft_printf("this is a string: %s and this is an char %c", "this is a test", 'c');
 }
-*/

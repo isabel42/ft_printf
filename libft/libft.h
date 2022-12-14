@@ -68,5 +68,5 @@ int		ft_tolower(int c);
 int		ft_toupper(int c);
 
 void	ft_putnbr_unsigned_fd(unsigned int i, int fd);
-void	ft_putnbr_base_fd(int n, char *base, int fd);
+void	ft_putnbr_base_fd(long int n, char *base, int fd);
 #endif

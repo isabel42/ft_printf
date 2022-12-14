@@ -14,16 +14,16 @@
 
 int	ft_putptr_hexamin(va_list ap)
 {
-	int		n;
-	int		result;
-	char	*base;
-	int		size;
+	long int		n;
+	int				result;
+	char			*base;
+	int				size;
 
 	ft_putstr_fd("0x", 1);
 	result = 2;
-	n = va_arg(ap, int);
+	n = va_arg(ap, long int);
 	base = "0123456789abcdef";
-	size = (int) ft_strlen(base);
+	size = (long int) ft_strlen(base);
 	ft_putnbr_base_fd(n, base, 1);
 	while (n > size)
 	{

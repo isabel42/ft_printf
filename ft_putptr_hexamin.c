@@ -14,21 +14,27 @@
 
 int	ft_putptr_hexamin(va_list ap)
 {
-	long int		n;
+	int long		n;
+	unsigned long long k;
 	int				result;
 	char			*base;
 	int				size;
 
 	ft_putstr_fd("0x", 1);
 	result = 2;
-	n = va_arg(ap, long int);
+	n = va_arg(ap, int long);
+	printf("***%ld****", n);
+	if (n < 0)
+		k = n + 18446744073709551614;
+	else
+		k = n;
 	base = "0123456789abcdef";
-	size = (long int) ft_strlen(base);
-	ft_putnbr_base_fd(n, base, 1);
-	while (n > size)
+	size = ft_strlen(base);
+	ft_putnbr_base_fd(k, base, 1);
+	while (k > size)
 	{
 		result++;
-		n = (n - (n % size)) / size;
+		k = (k - (k % size)) / size;
 	}
 	return (result + 1);
 }

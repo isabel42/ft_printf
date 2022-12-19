@@ -30,4 +30,6 @@ int	ft_putpercent(va_list ap);
 int	ft_parse_pos(char s);
 int	ft_alloc(va_list ap, int nb);
 
+void	ft_printf_void(const char *str, ...);
+
 #endif

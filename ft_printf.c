@@ -6,7 +6,7 @@
 /*   By: itovar-n <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 14:14:47 by itovar-n          #+#    #+#             */
-/*   Updated: 2022/11/11 17:56:39 by itovar-n         ###   ########.fr       */
+/*   Updated: 2022/12/20 17:14:12 by itovar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,17 +38,19 @@ int	ft_printf(const char *str, ...)
 	va_end(ap);
 	return (result);
 }
-
+/*
 int main()
  {
-	//int b = 0;
-	//int *a = &b;
-	//int j = 2147483643;
-	//ft_printf("this is a char: %c and this is and int %d\n", 'a', 1 );
-	ft_printf("%p\n", (void *) -1);
-	printf("%p\n", (void *) -1);
-	//ft_printf("simple text\n");
+	int b;
+	int a;
+	//int j = 2147483643;	printf("%p\n",(void *) -14523);
+	a = printf("%p\n","abc");
+	printf("%d\n",a);
+	printf("------------------\n");
+	b = ft_printf("%p\n","abc");
+	printf("%d\n",b);
 	//printf("%c\n",'B');
+	//ft_printf("simple text\n");
 	//printf("this is a test\n");
-	ft_printf("this is a string: %s and this is an char %c", "this is a test", 'c');
-}
+	//
+}*/

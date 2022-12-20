@@ -6,7 +6,7 @@
 /*   By: itovar-n <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/10 17:29:35 by itovar-n          #+#    #+#             */
-/*   Updated: 2022/11/11 18:14:34 by itovar-n         ###   ########.fr       */
+/*   Updated: 2022/12/20 16:56:19 by itovar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,11 +20,9 @@ int	ft_putnbr_hexacap(va_list ap)
 	long int		size;
 
 	result = 0;
-	n = va_arg(ap, long int);
-	if (n < 0)
-		n = n + 2 * 2147483648;
+	n = va_arg(ap, unsigned long long);
 	base = "0123456789ABCDEF";
-	size = (long int) ft_strlen(base);
+	size = (unsigned long long) ft_strlen(base);
 	ft_putnbr_base_fd(n, base, 1);
 	while (n > size)
 	{

@@ -6,7 +6,7 @@
 /*   By: itovar-n <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 14:07:22 by itovar-n          #+#    #+#             */
-/*   Updated: 2022/11/11 17:26:26 by itovar-n         ###   ########.fr       */
+/*   Updated: 2022/12/20 16:48:25 by itovar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,6 +67,6 @@ char	*ft_substr(char const *s, unsigned int start, size_t len);
 int		ft_tolower(int c);
 int		ft_toupper(int c);
 
-void	ft_putnbr_unsigned_fd(unsigned int i, int fd);
-void	ft_putnbr_base_fd(long int n, char *base, int fd);
+void	ft_putnbr_base_fd(unsigned long long n, char *base, int fd);
+
 #endif

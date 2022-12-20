@@ -33,8 +33,8 @@ SRCS	= ft_atoi.c \
 		  ft_tolower.c \
 		  ft_toupper.c \
 		  ft_strncmp.c \
-		  ft_putnbr_base_fd.c \
-		  ft_putnbr_unsigned_fd.c
+		  ft_putnbr_base_fd.c 
+
 
 SRCSB	= ft_lstnew_bonus.c \
 		  ft_lstadd_front_bonus.c \
